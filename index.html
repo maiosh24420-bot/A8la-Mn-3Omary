@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>A8la Mn 3Omaryy ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:#090709;color:#f8e9ed;font-family:Cairo,sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}.bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(ellipse at 15% 20%,#481421,transparent 40%),radial-gradient(ellipse at 90% 75%,#32101c,transparent 40%),#090709}.nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 6%;background:#090709df;backdrop-filter:blur(12px);border-bottom:1px solid #7f304522}.logo{font:italic 1.3rem "Playfair Display";color:#d87891;direction:ltr}.links{display:flex;gap:20px;color:#c5adb5;font-size:.85rem}.links a:hover{color:white}.hero{min-height:88svh;display:grid;place-items:center;text-align:center;padding:65px 22px;background:radial-gradient(ellipse at center,#4b142466,transparent 65%)}.eyebrow{color:#d87891;letter-spacing:2px;font-size:.75rem;margin-bottom:17px}h1{font:500 clamp(3rem,9vw,6rem) "Playfair Display";direction:ltr;margin-bottom:24px}.hero p{line-height:2.2;color:#e0cbd1}.heart{display:block;color:#d87891;font-size:2rem;margin:22px;animation:pulse 1.7s infinite}.btn{display:inline-block;border:1px solid #d87891;border-radius:35px;padding:11px 24px;background:linear-gradient(135deg,#81213b,#3d101d);color:white;cursor:pointer}.note{font-size:.8rem;color:#a68c93;margin-top:18px}section{padding:75px clamp(18px,7vw,90px);scroll-margin-top:65px}.head{text-align:center;margin-bottom:32px}.head h2{font-size:clamp(1.8rem,4vw,2.5rem)}.head p{color:#c5adb5;margin-top:8px}.cards{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{border:1px solid #6d293b;border-radius:16px;padding:23px;background:linear-gradient(145deg,#411522bb,#110b0ef2);min-height:205px;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#d87891}.symbol{color:#d87891;font-size:1.7rem;margin-bottom:12px}.card h3{font-size:1rem;margin-bottom:8px}.card p,.letter p{color:#d8c4ca;line-height:2.15;font-size:.92rem}.letter{max-width:780px;margin:auto;padding:clamp(24px,5vw,50px);border:1px solid #763047;border-radius:22px;background:linear-gradient(145deg,#2b0e17f2,#100a0df5)}.letter h2{text-align:center;margin-bottom:24px}.letter p{margin-bottom:14px}.sign{font:italic 1.3rem "Playfair Display";direction:ltr;text-align:left;color:#d87891;margin-top:22px}.finale{text-align:center;background:linear-gradient(180deg,transparent,#240d16,transparent)}.finale .big{font-size:3rem;color:#d87891;animation:pulse 1.7s infinite}.finale p{max-width:600px;line-height:2.2;color:#d9c4ca;margin:18px auto 24px}footer{text-align:center;padding:25px;color:#8e747c;border-top:1px solid #4b1c2a;font-size:.8rem}.float{position:fixed;bottom:-30px;color:#d87891;pointer-events:none;z-index:8;animation:up linear forwards}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,15px);background:#2b101a;border:1px solid #8d3851;padding:12px 18px;border-radius:30px;opacity:0;transition:.3s;z-index:9;text-align:center;width:max-content;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}@keyframes pulse{50%{transform:scale(1.12)}}@keyframes up{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}@media(max-width:700px){.nav{padding:14px 12px}.links{gap:9px;font-size:.7rem}.logo{font-size:1rem}.cards{grid-template-columns:1fr}section{padding:60px 17px}.card{min-height:0}}
+
+/* Password screen */
+.lock-screen{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:22px;background:radial-gradient(ellipse at 50% 35%,#481421,#090709 70%);transition:opacity .6s,visibility .6s}
+.lock-screen.unlocked{opacity:0;visibility:hidden;pointer-events:none}
+.lock-card{width:min(440px,100%);padding:38px 28px;text-align:center;border:1px solid #8c3b52;border-radius:24px;background:#100a0df2;box-shadow:0 20px 80px #0008}
+.lock-symbol{font-size:2.6rem;color:#d87891;margin-bottom:14px}.lock-card h2{font-size:1.8rem;margin-bottom:10px}.lock-card p{color:#c5adb5;line-height:1.9;margin-bottom:20px}
+.lock-card input{width:100%;padding:13px 15px;border:1px solid #693044;border-radius:12px;background:#090709;color:#fff;text-align:center;outline:none;margin-bottom:12px;font:inherit}
+.lock-card input:focus{border-color:#d87891}.lock-error{color:#ff9bb0;font-size:.85rem;min-height:25px;margin-top:8px}
+.photo-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:900px;margin:0 auto}
+.photo-card{padding:10px;border:1px solid #713047;border-radius:17px;background:linear-gradient(145deg,#30101b,#100a0d);box-shadow:0 12px 32px #0004}
+.photo-card img{width:100%;height:360px;object-fit:cover;display:block;border-radius:10px}
+.photo-card:first-child img{object-position:center 40%}
+.photo-card figcaption{text-align:center;color:#e4cbd2;padding:13px 5px 5px;font-size:.9rem}
+.message-frame{max-width:500px;margin:26px auto 0;padding:12px;border:1px solid #713047;border-radius:17px;background:#140a0f}
+.message-frame img{width:100%;height:auto;display:block;border-radius:9px}
+.message-caption{text-align:center;color:#c5adb5;font-size:.82rem;margin-top:12px}
+@media(max-width:650px){.photo-gallery{grid-template-columns:1fr}.photo-card img{height:auto;max-height:560px;object-fit:contain;background:#080608}.lock-card{padding:30px 22px}}
+
+
+.song-section{text-align:center;padding-top:62px!important;padding-bottom:70px!important}
+.song-box{max-width:650px;margin:0 auto;padding:28px 22px;border:1px solid #713047;border-radius:22px;background:linear-gradient(145deg,#30101b,#100a0d);box-shadow:0 18px 50px #0005}
+.song-note{color:#c5adb5;line-height:2;margin:10px auto 20px;max-width:470px;font-size:.92rem}
+.song-button{border:1px solid #d87891;border-radius:35px;padding:12px 25px;background:linear-gradient(135deg,#81213b,#3d101d);color:white;cursor:pointer;font:inherit;box-shadow:0 8px 30px #7f1d352c;transition:.25s}
+.song-button:hover{transform:translateY(-3px)}
+.song-frame{display:none;margin:22px auto 0;max-width:560px;aspect-ratio:16/9;border-radius:13px;overflow:hidden;border:1px solid #713047}
+.song-frame.show{display:block}
+.song-frame iframe{width:100%;height:100%;border:0}
+.song-label{color:#d87891;font-size:.8rem;margin-top:14px}
+
+</style></head><body>
+<div class="lock-screen" id="lockScreen">
+  <form class="lock-card" id="lockForm">
+    <div class="lock-symbol">♡ 🔒</div>
+    <div class="eyebrow">A LITTLE SECRET, JUST FOR YOU</div>
+    <h2>يارب تعجبك ينورعيني</h2>
+    <p>فيه حكاية حلوة جوّه افتح شوفها…<br>اكتب الباسورد عشان تفتح ذكرياتنا.</p>
+    <input id="sitePassword" type="password" placeholder=" عيد ميلادك يعيوني" autocomplete="off" required>
+    <button class="btn" type="submit">افتح ذكرياتنا ♡</button>
+    <div class="lock-error" id="lockError" role="status"></div>
+  </form>
+</div>
+<div class="bg"></div>
+<header class="nav"><a class="logo" href="#home">♡ For You ♡</a><nav class="links"><a href="#home">البداية</a><a href="#memories">ذكرياتنا</a><a href="#photos">صورنا</a><a href="#song">الأغنية</a><a href="#letter">جواب</a><a href="#last">للآخر</a></nav></header>
+<main>
+<section class="hero" id="home"><div><div class="eyebrow">SOME MEMORIES NEVER REALLY LEAVE</div><h1>وحشتني يعيوني ونفسي اشوفك والله  ♡</h1><p>مش عارفة إذا كنت متوقع تلاقي حاجة زي دي،<br>بس فيه كلام وذكريات فضلت جوايا… وحبيت أسيبهم يوصلولك بطريقتهم.</p><span class="heart">♡</span><a class="btn" href="#memories">تعالى نفتكر شوية ←</a><div class="note">خد وقتك… الصفحة دي معمولة مخصوص ليك.</div></div></section>
+<section id="memories"><div class="head"><div class="eyebrow">OUR LITTLE STORY</div><h2>حاجات فاكرة تفاصيلها ♡</h2><p>يمكن عدى وقت، بس في تفاصيل لسه ليها مكانها.</p></div><div class="cards">
+<article class="card"><div class="symbol">♡</div><h3>قبل عيد الحب بكام يوم</h3><p>من أول كلام بينا، مكنتش أعرف إن الكلام ده هيبقى جزء من حكاية هفتكر تفاصيلها لحد دلوقتي.</p></article>
+<article class="card"><div class="symbol">✉</div><h3>المسج بتاعتك يوم عيد الحب</h3><p>فاكرة لما سبت الماتش مخصوص عشان تبعتلي اول مسج لاول عيد حب كان بينا اصلا واللي جه صدفه اننا عرفنا بعض قبلها بيومين ، وبعدها رجعت كملت الماتش. يمكن بالنسبالك كانت لحظة وعدّت، بس أنا لسه فاكرة إنك وقفت اللي في إيدك عشان تبعتها تفرحني بيها.</p></article>
+<article class="card"><div class="symbol">☾</div><h3>يوم 12/3/2026 عمره م يتنسي </h3><p>أول مرة أشوفك ونتقابل ونقعد مع بعض. يوم مختلف ف كل حاجه ف حياتي وليه مكان ف قلبي عمره م يتنسي، عشان وقتها بجد كنت حاسه معاك بالأمان .</p></article>
+<article class="card"><div class="symbol">☁</div><h3>أول مكالمة لينا</h3><p>من أحلى المكالمات اللي فاكرها بجد … لما نمنا احنا الاتنين ومحسناش بنفسنا وإحنا ف المكالمة ومكنش فارق معايا حاجه لاني كنت متطمنه وانا معاك، وانت اصلا منمتش الا ع كنت متطمن برده ومبسوط.</p></article>
+<article class="card"><div class="symbol">♡</div><h3>احساس عمره م يتعوض </h3><p>مكنتش متخيلة ان ف يوم م الايام ممكن ييجي حد واحس معاه بالامان زي م حسيت معاك كنت مبسوطه اووي وانا معاك ومتطمنه ومن ساعه م مشيت  معداش عليا يوم حسيت فيه بالامان اللي كنت حاسه وانت معايا</p></article>
+<article class="card"><div class="symbol">∞</div><h3>من يوم 17/4/2026</h3><p>عدّى 6 شهور من يوم ما بعدنا، وأنا من وقتها بطمن عليك من بعيد. مش كل سكوت معناه إن الشخص نسي؛ ساعات بيكون لسه فيه كلام كتير مش عارف يوصله إزاي.</p></article>
+</div></section>
+<section id="photos">
+  <div class="head"><div class="eyebrow">MOMENTS I KEEP CLOSE</div><h2>صورتين من حكايتنا ♡</h2><p>صور يمكن عادية لأي حد… بس مش بالنسبالي.</p></div>
+  <div class="photo-gallery">
+    <figure class="photo-card"><img src="images/together1.jpg" alt="صورة من ذكرياتنا الأولى"><figcaption>♡ذكري عندي استعداد اضحي بعمري ولا اني استغني عنها♡</figcaption></figure>
+    <figure class="photo-card"><img src="images/together2.jpg" alt="صورة تانية من ذكرياتنا"><figcaption>♡الصورة اللي واخده قلبي معاها♡</figcaption></figure>
+  </div>
+</section>
+
+<section id="letter"><div class="head"><div class="eyebrow">FROM MY HEART TO YOU</div><h2>حاجه كد بسيطه ليك ينورعيني</h2></div><div class="letter"><h2>ياعمري انت♡</h2>
+
+<p>يمكن تستغرب إني عملتلك موقع كامل، بس كان نفسي أوصلك إحساسي بطريقة تشبهني، وأفضّل معاك نقدم نرجع لها في أي وقت.</p>
+
+عارف يا طه، في حاجات بتعدّي علينا ونفتكر إنها مجرد أيام عادية، بس بعد ما بتعدّي بنكتشف إنها كانت من أحلى الحاجات اللي حصلت لنا. وأنا مهما حاولت أوصفلك، مش هعرف أشرحلك قد إيه وجودك كان فارق معايا، وقد إيه تفاصيل صغيرة منك قدرت تسيب جوايا إحساس كبير أوي.
+
+يمكن أكتر حاجة وحشاني مش موقف معين، قد ما هو إحساسي وأنا بتكلم معاك، ضحكتي من غير ما أحس، وراحتي وأنا بحكيلك أي حاجة، وإحساس الأمان اللي كان بيخليني أنسى الدنيا شوية. وحشني إنك كنت شخص أقدر أكون معاه على طبيعتي زي م كنت بتقولي، من غير ما أفكر كتير في كلامي أو أخاف أبان على حقيقتي.
+
+ومهما الوقت عدى، ومهما بقى بينا سكوت ومسافات، في حاجات جوايا لسه زي ما هي. مش بقولك كده عشان أرجعك للماضي، ولا عشان أحسسك إنك مطالب بأي حاجة، أنا بس حبيت أكون صادقة معاك، حتى لو الصراحة دي مجرد كلام هتقراه وتكمل يومك عادي.
+
+بس أنا لسه بتمنالك الخير من قلبي، ولسه يهمني تكون مبسوط ومرتاح، حتى لو مش عارفة اتطمن عليك زي م كنت بكلمك. ويمكن مش كل اللي بنحبهم بيكون نصيبنا نكمل معاهم الطريق، بس ده مش معناه إن وجودهم كان عادي، أو إن الأيام اللي عشناها سوا ملهاش قيمة.
+
+ولو في يوم افتكرتني، أتمنى تفتكرني بابتسامة، وتفتكر إن كان فيه واحدة بتحبك من كل قلبها، بتفرح لفرحك، وبتخاف عليك اكتر من نفسها،و نفسها تشوفك دايمًا بخير بس مش اكتر. واحده شافت فيك حاجات حلوة يمكن إنت نفسك مكنتش واخد بالك منها.
+
+بس مش عارفة بكرة شايلنا إيه، ولا الأيام ممكن تجمعنا تاني ولا لأ، ومش هدعي لربنا ولا هطلب منه حاجه غير اللي بطلبها منه من يوم م عرفتك. كل اللي أعرفه إني كنت متطمنه معاك إنك كنت كل حياتي بمعني الكلمة ايوا كان وقت قليل اوي بس هيا مش بالسنين علفكره، وإن في ذكريات مهما عدى عليها وقت، هتفضل ليها مكانة خاصة جوايا.
+
+ولو في يوم حبيت تتكلم، هتلاقيني موجوده وبتمني اللحظة دي اصلا عمري م هقفل الباب ف وشك لان محدش غيرك معاه المفتاح ع يدخل ، ومن غير عتاب والله، ولا ضغط على أي حد فينا. ولو ده محصلش، فبرضه بتمنالك حياة حلوة تريح بقلبك وتفرحك، وراحة بال متفارقكش أبدًا.
+
+ خلي بالك من نفسك يا ينورعيني عشان لسه بتمنالك كل حاجة حلوة وبدعيلك قبلي ف كل حاجه 🤍</p>
+
+<p class="english-message" style="text-align: left;direction: ltr; width: 100%; margin-left: 0; font-size: 24px; font-weight: bold;">I still care about you. ♡</p>
+</div></section>
+
+<section class="song-section" id="song">
+  <div class="head"><div class="eyebrow">A SONG THAT REMINDS ME OF YOU</div><h2>سيبني أقولك بحبك ♡</h2></div>
+  <div class="song-box">
+    <div style="font-size:2rem;color:#d87891;margin-bottom:8px">♫ ♡ ♪</div>
+    <h3>TUL8TE — إنت حبيبي</h3>
+    <p class="song-note">في أغاني بتقول كلام مش بنعرف نقوله… فحبيت أسيبلك الأغنية دي هنا، تسمعها وإنت بتفتكر ذكرياتنا.</p>
+    <button class="song-button" id="songToggle" type="button">▶ شغّل ذكرياتنا ♡</button>
+    <div class="song-frame" id="songFrame">
+      <iframe id="songVideo" title="TUL8TE - Enta Habeeby" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="song-label">اضغط على الزرار عشان تبدأ الأغنية 🎧</div>
+  </div>
+</section>
+
+<section class="finale" id="last"><div class="big">♡</div><h2>لسه في قلبي مكان ليك</h2><p>مش عارفة الأيام مخبّية لينا إيه، بس كل اللي عارفاه إن اللي حسّيته معاك كان حقيقي. ولو إنت حابب تحكي وتقول اي حاجه عندك انا نفسي اسمعك اصلا ، هسمع منك اي حاجه عامة … ومن غير ضغط، ومن غير عتاب.</p><button class="btn" id="heartBtn">اضغط هنا ♡</button><div class="note">مش لازم ترد دلوقتي… خليك براحتك.</div></section>
+</main><footer>اتعملت بكل الحب والحنين ♡ · For Taha</footer><div class="toast" id="toast" role="status">يمكن في حكايات لسه تستاهل كلام هادي… ♡</div>
+<script>
+
+const songToggle = document.getElementById("songToggle");
+const songFrame = document.getElementById("songFrame");
+const songVideo = document.getElementById("songVideo");
+let songPlaying = false;
+songToggle.addEventListener("click", function () {
+  if (!songPlaying) {
+    songVideo.src = "https://www.youtube-nocookie.com/embed/vqP7JgscsbI?autoplay=1&rel=0";
+    songFrame.classList.add("show");
+    songToggle.textContent = "■ اقفل الأغنية ♡";
+    songPlaying = true;
+    songFrame.scrollIntoView({behavior:"smooth", block:"center"});
+  } else {
+    songVideo.src = "";
+    songFrame.classList.remove("show");
+    songToggle.textContent = "▶ شغّل ذكرياتنا ♡";
+    songPlaying = false;
+  }
+});
+
+
+const SITE_PASSWORD = "7112002"; 
+const lockForm = document.getElementById("lockForm");
+lockForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  const entered = document.getElementById("sitePassword").value;
+  const error = document.getElementById("lockError");
+  if (entered === SITE_PASSWORD) {
+    document.getElementById("lockScreen").classList.add("unlocked");
+    document.body.style.overflowY = "auto";
+    sessionStorage.setItem("tahaSiteUnlocked", "yes");
+  } else {
+    error.textContent ="مش ده ينورعيني ♡";
+    document.getElementById("sitePassword").value = "";
+  }
+});
+if (sessionStorage.getItem("tahaSiteUnlocked") === "yes") {
+  document.getElementById("lockScreen").classList.add("unlocked");
+}
+
+function createHeart(){const h=document.createElement("span");h.className="float";h.textContent=Math.random()>.45?"♡":"♥";h.style.left=Math.random()*100+"vw";h.style.fontSize=(12+Math.random()*18)+"px";const d=5+Math.random()*5;h.style.animationDuration=d+"s";document.body.appendChild(h);setTimeout(()=>h.remove(),d*1000)}setInterval(createHeart,900);
+document.getElementById("heartBtn").addEventListener("click",()=>{for(let i=0;i<18;i++)setTimeout(createHeart,i*65);const t=document.getElementById("toast");t.classList.add("show");setTimeout(()=>t.classList.remove("show"),3200)});
+</script></body></html>
